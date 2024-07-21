@@ -1,4 +1,3 @@
-import React from "react";
 import Call from '../assets/icons/phone.svg';
 import Message from '../assets/icons/message-square.svg'
 import Location from '../assets/icons/map-pin.svg';

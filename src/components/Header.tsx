@@ -12,15 +12,15 @@ import categories from "../categories";
 import { Product,Category } from "../type";
 const Header = () => {
  const products:Product[] = [];
- const [value,setValue] = useState(null);
+ const [value,setValue] = useState<string | null>(null);
  const [results,setResults] = useState<Product[]>([]);
  const [searchClicked,setSearchClicked] = useState(false);
  const subCategories = categories.map((sub)=> sub.subCategories);
  const items = subCategories.map(item=> item.map((product)=>product.Products));
 //  const Products:Product[] = [];
  items.map((item)=>item.map((product)=>product?.map((single)=>products.push(single))))
- function SearchProduct(val:string){
-   const searchValue = products.filter((prod)=> prod.id.includes(val));
+ function SearchProduct(val:string | null){
+   const searchValue = products.filter((prod)=> val && prod?.id.includes(val));
    setSearchClicked(!searchClicked);
    setResults(searchValue)
  }
@@ -50,7 +50,7 @@ const Header = () => {
               <input
                 className="  text-[12px]  lg:text-sm placeholder:text-black border border-black p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
                 type="text"
-                onChange={(e:ChangeEvent<HTMLInputElement>)=>setValue(e.target.value)}
+                onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setValue(e.target.value)}
                 name=""
                 placeholder="Search"
                 id=""

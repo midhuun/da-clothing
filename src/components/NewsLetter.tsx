@@ -1,9 +1,9 @@
-import React from "react";
-import News from "../assets/ad.jpg";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import News2 from "../assets/ad2.jpg";
-import News3 from "../assets/ad3.jpg";
+// import React from "react";
+// import News from "../assets/ad.jpg";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from 'react-responsive-carousel';
+// import News2 from "../assets/ad2.jpg";
+// import News3 from "../assets/ad3.jpg";
 const NewsLetter = () => {
 
   return (

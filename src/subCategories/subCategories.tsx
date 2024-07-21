@@ -1,12 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import AllProducts from '../categories';
-type Categories = {
-    id:string,
-    categoryId:string,
-    name:string,
-    image:string,
-    subCategories:any
-}
 
 const SubCategories:React.FC = () => {
     const {category} = useParams(); 

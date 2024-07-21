@@ -348,7 +348,6 @@ const categories: Category[] = [
                         image: "",
                         categoryId: "mens",
                         subCategoryId: "tshirts",
-                        image:''
                     },
                     {
                         id: "chrome-culture-black",
