@@ -1,0 +1,6 @@
+@media (min-width: 1250px) {
+    .carousel{
+      height: 550px !important;
+      width: 350px !important;
+    }
+  }

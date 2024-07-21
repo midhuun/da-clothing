@@ -1,0 +1,13 @@
+body{
+    /* background-color: #f7f7f7; */
+}
+.portfolio{
+    overflow-x: hidden;
+}
+.portfolio div{
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+.portfolio div img:hover{
+    transform: scale(1.02);
+}
