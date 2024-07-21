@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import AllProducts from '../categories';
 import Card from "./card";
 import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './css/item.css';
 import Shade from '../assets/shade.jpg';
 const Item = () => {
@@ -17,25 +18,28 @@ const Item = () => {
     <div className=" flex justify-center md:pt-10 ">
       {
       <div className="md:flex md:w-[90%] w-full flex-wrap justify-center px-2 md:px-5">
-        <div className="lg:w-[45%] flex justify-center md:justify-end ">
-        <div className="carousel">
-        <Carousel interval={2000} useKeyboardArrows={true} showArrows={false} className="h-[350px]" autoPlay
-        infiniteLoop
+        <div className="lg:w-[45%] flex items-center justify-center md:justify-end ">
+        <Carousel 
+         interval={2000} 
+         useKeyboardArrows={true}
+          showArrows={false}
+        infiniteLoop={true}
         showThumbs={false}
-        showStatus={false}>
+        showStatus={false}
+        autoPlay
+        axis="horizontal"
+        >
         <img
-          className=" h-[300px] md:h-[350px] border lg:h-[550px] object-contain "
+          className=" h-[300px] md:h-[350px] border object-contain lg:h-[550px]"
           src={product?.image}
           alt=""
         />
         <img
-          className=" h-[300px] md:h-[350px] border lg:h-[550px] object-contain "
+          className="object-contain h-[300px] md:h-[350px] border lg:h-[550px] "
           src={Shade}
           alt=""
         />
-        
       </Carousel> 
-      </div>
         </div>
         <div className="lg:w-[55%] p-3  md:p-7 flex   flex-col md:items-start ">
           <h3 className="text-lg md:text-2xl py-2  font-bold text-black">{product?.name}</h3>

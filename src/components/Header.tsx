@@ -68,8 +68,8 @@ const Header = () => {
                   <h2 className=" text-md font-semibold w-[180px]">{result.name}</h2>
                   <h2 className="text-sm">{result.blendRatio}</h2>
                   </div>
-                
                 </div>
+                <hr />
                 </Link>
                 )}
                 </div>
