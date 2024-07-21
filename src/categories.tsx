@@ -11,12 +11,12 @@ import wear10 from './subCategories/womens/i-activewear/activewear_womens-37.jpg
 import wear11 from './subCategories/womens/i-activewear/activewear_womens-46.jpg';
 import Hoodie from './subCategories/womens/i-hoodies/hoodie.jpg';
 import MenHoodie from './assets/Men/hoodie-men.jpg';
-import MenTees from './assets/Men/t-shirts.jpg';
+import MenTees from './assets/Men/t-shirts.png';
 import Shorts from './assets/Men/shorts.jpg';
-import Jacket from './assets/Men/jacket.jpg';
-import MenSweat from './assets/Men/sweatshirt.jpg';
+import Jacket from './assets/Men/jacket.png';
+import MenSweat from './assets/Men/sweatshirt.png';
 import TrackMen from './assets/Men/track-men.jpg';
-import Polo from './assets/Men/polo.jpg';
+import Polo from './assets/Men/polo.png';
 import { Category } from './type';
 
 const categories: Category[] = [
@@ -106,13 +106,6 @@ const categories: Category[] = [
                 id: "yogapants",
                 categoryId: "womens",
                 name: "Yoga Pants",
-                image: Hoodie,
-                Products: []
-            },
-            {
-                id: "pants",
-                categoryId: "womens",
-                name: "Pants",
                 image: Hoodie,
                 Products: []
             },
@@ -483,13 +476,6 @@ const categories: Category[] = [
                 image: "path/to/kids-track-suits.jpg",
                 Products: []
             },
-            {
-                id: "pants",
-                categoryId: "kids",
-                name: "Pants",
-                image: "path/to/kids-pants.jpg",
-                Products: []
-            }
         ]
     }
 ];

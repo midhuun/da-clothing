@@ -11,7 +11,7 @@ const SubItems:React.FC = () => {
       {items?.Products?.map((item:any)=>
         <Link key={item.id} to={{
             pathname: `/categories/${category}/${subcategory}/${item.id}`
-        }}> <div  className="flex justify-center flex-col items-center md:h-[450px] md:w-[320px] h-[250px] w-[160px] rounded-md bg-[#fafafa] shadow-md">
+        }}> <div  className="flex justify-center flex-col items-center md:h-[450px] md:w-[320px] h-[250px] w-[160px] rounded-md bg-[#fafafa] gap-3 shadow-sm border">
             <div className="flex justify-center items-center p-1 ">
             <img className=" md:h-[400px] md:w-[320px] h-[180px] w-[150px] object-contain p-1" src={item.image} alt={item.name} />
             </div>

@@ -2,7 +2,7 @@ import Call from '../assets/icons/phone.svg';
 import Message from '../assets/icons/message-square.svg'
 import Location from '../assets/icons/map-pin.svg';
 const Footer = () => {
-  return <div className="">
+  return <div className="pt-[50px]">
     <footer className="md:flex justify-between bg-[#333333] p-6 text-[12px] md:text-[14px] text-white">
             <div className="flex flex-col md:gap-4">
               <div className="logo py-3">

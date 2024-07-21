@@ -48,7 +48,7 @@ const Header = () => {
     <div className="hidden lg:flex items-center gap-6 lg:gap-[50px]">
             <div className="search relative flex items-center gap-3">
               <input
-                className="  text-[12px]  lg:text-sm placeholder:text-black border border-black p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
+                className=" placeholder:text-gray-400 rounded-lg  text-[12px]  lg:text-sm  border-gray-400  border p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
                 type="text"
                 onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setValue(e.target.value)}
                 name=""

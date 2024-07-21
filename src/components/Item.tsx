@@ -42,7 +42,7 @@ const Item = () => {
       </Carousel> 
         </div>
         <div className="lg:w-[55%] p-3  md:p-7 flex   flex-col md:items-start ">
-          <h3 className="text-lg md:text-2xl py-2  font-bold text-black">{product?.name}</h3>
+          <h3 className="text-xl md:text-2xl py-2  font-bold text-black">{product?.name}</h3>
           <div className="flex md:justify-center h-[50px] items-start gap-3">
           <p className="md:py-1 text-md font-semibold mb-5"><span className="text-black">Color:</span>  {product?.color}</p>
           <div className="flex   md:py-2 justify-center items-center">
@@ -59,7 +59,7 @@ const Item = () => {
 }
     </div>
     <p className="p-4 font-semibold text-lg">Similar Products:</p>
-    <div className="flex py-5 w-full overflow-scroll overflow-y-hidden scr">
+    <div className="flex scroll gap-3 py-5 w-full overflow-scroll overflow-y-hidden scr">
 
         {similar?.map((product)=>
         <Link key={product.id} to={{
