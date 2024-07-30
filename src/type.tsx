@@ -4,7 +4,7 @@ export type Product = {
     gsm: string;
     type?: string;
     blendRatio: string;
-    image: string;
+    image: string[] ;
     color: string;
     fabric?:string;
     wash?:string;

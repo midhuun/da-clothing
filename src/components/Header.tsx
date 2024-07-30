@@ -19,8 +19,9 @@ const Header = () => {
  const items = subCategories.map(item=> item.map((product)=>product.Products));
 //  const Products:Product[] = [];
  items.map((item)=>item.map((product)=>product?.map((single)=>products.push(single))))
- function SearchProduct(val:string | null){
-   const searchValue = products.filter((prod)=> val && prod?.id.includes(val));
+ function SearchProduct(event:any){
+   event.preventDefault();
+   const searchValue = products.filter((prod)=> value && prod?.id.includes(value));
    setSearchClicked(!searchClicked);
    setResults(searchValue)
  }
@@ -28,10 +29,10 @@ const Header = () => {
  
   return (
     <>
-     <div className="md:hidden">
+     <div className="lg:hidden">
        <MobileNav />
      </div>
-     <div className="md:flex hidden p-3 md:p-10 justify-between items-center w-full top-0 fixed z-[999] h-[80px] bg-[#FAFAFA]">
+     <div className="lg:flex hidden p-3 md:p-10 justify-between items-center w-full top-0 fixed z-[999] h-[80px] bg-[#FAFAFA]">
     <div className="flex items-center w-[33%] ">
       <Link to='/'>
       <img src={Logo} alt="" className="h-[45px] hidden md:block  w-[45px] border rounded-full object-cover" />
@@ -46,7 +47,7 @@ const Header = () => {
     <div className=" flex justify-center"><h5 className="uppercase font-semibold text-sm md:text-xl logo pl-5 ">DA Clothing Manufacturer</h5></div>
     <div>
     <div className="hidden lg:flex items-center gap-6 lg:gap-[50px]">
-            <div className="search relative flex items-center gap-3">
+            <form onSubmit={(e)=>SearchProduct(e)} className="search relative flex items-center gap-3">
               <input
                 className=" placeholder:text-gray-400 rounded-lg  text-[12px]  lg:text-sm  border-gray-400  border p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
                 type="text"
@@ -62,7 +63,7 @@ const Header = () => {
                 <Link onClick={()=>setSearchClicked(!searchClicked)} to={`/categories/${result.categoryId}/${result.subCategoryId}/${result.id}`}>
                 <div className="flex justify-start py-3 gap-3">
                   <div className="w-[100px] flex ">
-                  <img src={result.image} className="h-[120px] w-[100px] object-contain" alt="" />
+                  <img src={result.image[0]} className="h-[120px] w-[100px] object-contain" alt="" />
                   </div>
                   <div className="flex flex-col gap-2">
                   <h2 className=" text-md font-semibold w-[180px]">{result.name}</h2>
@@ -75,10 +76,10 @@ const Header = () => {
                 </div>
               </div>
               :""}
-              <h2 onClick={()=>SearchProduct(value)} className="absolute cursor-pointer  z-[1000] right-2" >
+              <button className="absolute cursor-pointer  z-[1000] right-2" >
                 <img  className="h-4" src={Search} alt="" />
-              </h2>
-            </div>
+              </button>
+            </form>
             <div className="call flex items-center gap-2">
               <a className="items-center flex " href="tel:+917010121851">
                 {" "}

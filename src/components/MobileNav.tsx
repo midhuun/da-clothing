@@ -14,7 +14,7 @@ const MobileNav = () => {
  const items = subCategories.map(item=> item.map((product)=>product.Products));
 //  const Products:Product[] = [];
  items.map((item)=>item.map((product)=>product?.map((single)=>products.push(single))))
- function SearchProduct(e:React.MouseEvent<HTMLElement>){
+ function SearchProduct(e:any){
    e.preventDefault();
    const searchValue = products.filter((prod)=> value && prod?.id.includes(value));
    setSearchClicked(!searchClicked);
@@ -48,7 +48,7 @@ const MobileNav = () => {
         <img className="h-8 w-8 rounded-full border mx-5" src={Logo} alt="" />
         </Link>
         </div>
-        <div className="search relative flex items-center gap-3">
+        <form onSubmit={(e)=>SearchProduct(e)} className="search relative flex items-center gap-3">
               <input
                 className="  text-[12px]  lg:text-sm placeholder:text-gray-400 border border-gray-400 rounded-sm p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
                 type="text"
@@ -64,7 +64,7 @@ const MobileNav = () => {
                 <Link onClick={()=>setSearchClicked(!searchClicked)} to={`/categories/${result.categoryId}/${result.subCategoryId}/${result.id}`}>
                 <div className="flex justify-start py-1 gap-1">
                   <div className="w-[60px] flex ">
-                  <img src={result.image} className="h-[70px] w-[60px] object-contain" alt="" />
+                  <img src={result.image[0]} className="h-[70px] w-[60px] object-contain" alt="" />
                   </div>
                   <div className="flex flex-col gap-2">
                   <h2 className=" text-[12px] font-semibold">{result.name}</h2>
@@ -77,10 +77,10 @@ const MobileNav = () => {
                 </div>
               </div>
               :""}
-              <a onClick={(e:React.MouseEvent<HTMLElement>)=>SearchProduct(e)} className="absolute right-2" href="">
+              <button  className="absolute right-2">
                 <img className="h-4" src={Search} alt="" />
-              </a>
-            </div>
+              </button>
+            </form>
         </div>
     </div>
     </>

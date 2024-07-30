@@ -4,7 +4,6 @@ import Card from "./card";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './css/item.css';
-import Shade from '../assets/shade.jpg';
 const Item = () => {
   const {category,subcategory,item} = useParams(); 
   const current = AllProducts?.find((cat)=>cat.id === category) || null;
@@ -12,6 +11,7 @@ const Item = () => {
   const products = subCategories?.Products;
   const product = subCategories?.Products?.find((product) => product.id == item)
   const similar = products?.filter((item)=> item.id !== product?.id )
+  
  
   return (
     <>
@@ -20,7 +20,7 @@ const Item = () => {
       <div className="md:flex md:w-[90%] w-full flex-wrap justify-center px-2 md:px-5">
         <div className="lg:w-[45%] flex items-center justify-center md:justify-end ">
         <Carousel 
-         interval={2000} 
+         interval={2000}
          useKeyboardArrows={true}
           showArrows={false}
         infiniteLoop={true}
@@ -29,16 +29,13 @@ const Item = () => {
         autoPlay
         axis="horizontal"
         >
-        <img
+        {product?.image?.map((img,index)=>
+          <img key={index}
           className=" h-[300px] md:h-[350px] border object-contain lg:h-[550px]"
-          src={product?.image}
+          src={img}
           alt=""
         />
-        <img
-          className="object-contain h-[300px] md:h-[350px] border lg:h-[550px] "
-          src={Shade}
-          alt=""
-        />
+        )}
       </Carousel> 
         </div>
         <div className="lg:w-[55%] p-3  md:p-7 flex   flex-col md:items-start ">
@@ -58,13 +55,14 @@ const Item = () => {
       </div>
 }
     </div>
-    <p className="p-4 font-semibold text-lg">Similar Products:</p>
+    
+    {similar?(similar?.length>0?<p className="p-4 font-semibold text-lg">Similar Products:</p>:""):""}
     <div className="flex scroll gap-3 py-5 w-full overflow-scroll overflow-y-hidden scr">
 
         {similar?.map((product)=>
         <Link key={product.id} to={{
           pathname: `/categories/${category}/${subcategory}/${product.id}`
-      }}><Card image ={product.image}  name={product.name} /></Link>
+      }}><Card image ={product.image[0]}  name={product.name} /></Link>
     )}
       </div>
     </>

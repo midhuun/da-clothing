@@ -10,70 +10,166 @@ import wear9 from './subCategories/womens/i-activewear/activewear_womens-35.jpg'
 import wear10 from './subCategories/womens/i-activewear/activewear_womens-37.jpg';
 import wear11 from './subCategories/womens/i-activewear/activewear_womens-46.jpg';
 import Hoodie from './subCategories/womens/i-hoodies/hoodie.jpg';
-import MenHoodie from './assets/Men/hoodie-men.jpg';
+import MenHoodie from './assets/product/all_over_print_hoodie (3).png';
 import MenTees from './assets/Men/t-shirts.png';
-import Shorts from './assets/Men/shorts.jpg';
-import Jacket from './assets/Men/jacket.png';
-import MenSweat from './assets/Men/sweatshirt.png';
 import TrackMen from './assets/Men/track-men.jpg';
 import Polo from './assets/Men/polo.png';
+import Kenneth from './assets/product/Kenneth_cole_Crew_neck.jpg'
+import Kenneth2 from './assets/product/Kenneth_cole_Crew_neck (2).jpg';
+import AllOverPrintSleeves from  './assets/product/Allover_Print_Full_sleeves.jpg';
+import AlloverPrintSleeves2 from  './assets/product/Allover_Print_Full_sleeves (2).jpg';
+import AllOverPrintHoodie from './assets/product/all_over_print_hoodie.jpg';
+import AllOverPrintHoodie2 from './assets/product/all_over_print_hoodie (2).jpg';
+import SublimationXl from './assets/product/sublimation_8xl_t-shirt.jpg';
+import SublimationTees from './assets/product/sublimation_t-shirt.jpg';
+import polyster_turby from './assets/product/Polyster_turby_Track-suit.jpg';
+import polyster_turby2 from './assets/product/Polyster_turby_Track-suit_2.jpg';
+import PrintedTees from './assets/product/Printed_oversized_tees_White.jpg';
+import singleJerseyPolo from './assets/product/single_jersey_Polo_Black_220GSm.jpg';
+import singleJerseyPolo2 from './assets/product/single_jersey_Polo_Black_220GSm (2).jpg';
+import BoysTrack_Pant from './assets/product/Boys_track_Pant.jpg';
+import BoysTrackPant from './assets/product/Boys_track_Pant_2.jpg';
+import Belui from './assets/product/Belui_T_shirt_crewneck_.jpg';
+import PolysterCrew from './assets/product/Polyster_Crew.jpg';
+import PolysterCrew2 from './assets/product/Polyster_Crew_2.jpg';
+import Travis from './assets/Mens_T-shirt/Travis_Scott_Comic.jpeg';
+import Travis2 from './assets/Mens_T-shirt/Travis_Scott_Comic (2).jpeg';
+import Travis3 from './assets/Mens_T-shirt/Travis_Scott_Comic (3).jpeg';
+import Nirvana from './assets/Mens_T-shirt/Nirvana.jpeg';
+import Nirvana2 from './assets/Mens_T-shirt/Nirvana (2).jpeg';
+import Nirvana3 from './assets/Mens_T-shirt/Nirvana (3).jpeg';
+import AstroWorld from './assets/Mens_T-shirt/Astro-world.jpeg';
+import AstroWorld2 from './assets/Mens_T-shirt/Astro-world (2).jpeg';
+import AstroWorld3 from './assets/Mens_T-shirt/Astro-world (3).jpeg';
+import WeekendXO from './assets/Mens_T-shirt/Weekend_XO.jpeg';
+import WeekendXO2 from  './assets/Mens_T-shirt/Weekend_XO (2).jpeg';
+import WeekendXO3 from './assets/Mens_T-shirt/Weekend_XO (3).jpeg';
+import Walnut from './assets/organic-shorts/Walnut.jpg';
+import Walnut2 from './assets/organic-shorts/Walnut (2).jpg';
+import Banana from './assets/organic-shorts/Banana_Yellow.jpg';
+import Banana2 from './assets/organic-shorts/Banana_Yellow (2).jpg';
+import Blue from './assets/organic-shorts/Woad_Blue.jpg';
+import Blue2 from './assets/organic-shorts/Woad_blue (2).jpg';
+import Madder from './assets/organic-shorts/Madder_brick.jpg';
+import Madder2 from './assets/organic-shorts/Madder_brick (2).jpg';
+import Green from './assets/organic-shorts/Leaf_green.jpg';
+import Green2 from './assets/organic-shorts/Leaf_green (2).jpg';
+import OverBlue from './assets/Over-sizedtees/Blue.jpeg';
+import OverBlue2 from './assets/Over-sizedtees/Blue (2).jpeg';
+import OverBlack from './assets/Over-sizedtees/Black.jpeg';
+import OverBlack2 from './assets/Over-sizedtees/Black (2).jpeg';
+import OverBeige from './assets/Over-sizedtees/Beige.jpeg';
+import OverBeige2 from './assets/Over-sizedtees/beige (2).jpeg';
+import OverWhite from './assets/Over-sizedtees/White.jpeg';
+import OverWhite2 from './assets/Over-sizedtees/white (2).jpeg';
+import OverteesWhite from './assets/product/Printed_OverSize_Naruto.jpg';
+import WBlackCrew from './assets/women_tees/Basics Black crew neck 180 GSM.jpg';
+import WBlackCrew2 from './assets/women_tees/Basics Black crew neck 180 GSM (2).jpg';
+import WBlackCrew3 from './assets/women_tees/Basics Black crew neck 180 GSM (3).jpg';
+import WCage from './assets/women_tees/Cage back stormi tee 180 GSM.jpg';
+import WCage2 from './assets/women_tees/Cage back stormi tee 180 GSM (2).jpg'
+import WCharlotte from './assets/women_tees/charlotte cut beads  aqua blue EMBROIDERY womens  tees 180 GSM.jpg';
+import WCharlotte2 from './assets/women_tees/charlotte cut beads  aqua blue EMBROIDERY womens  tees 180 GSM (2).jpg';
+import WCharlotte3 from './assets/women_tees/charlotte cut beads  aqua blue EMBROIDERY womens  tees 180 GSM (3).jpg';
+import WEmbroid from './assets/women_tees/EMBROIDERY womens blue  tees 180 GSM.jpg';
+import WEmbroid2 from './assets/women_tees/EMBROIDERY womens blue  tees 180 GSM (2).jpg';
+import WEmbroid3 from './assets/women_tees/EMBROIDERY womens blue  tees 180 GSM (3).jpg';
+import WTornTees from './assets/women_tees/torn tees denim effect 200 GSM.jpg';
+import WTornTees2 from './assets/women_tees/torn tees denim effect 200 GSM (2).jpg';
+import WTornTees3 from './assets/women_tees/torn tees denim effect 200 GSM (3).jpg';
+import WcrewNeck from './assets/women_tees/torn tees denim effect 200 GSM.jpg';
+import WcrewNeck2 from './assets/women_tees/torn tees denim effect 200 GSM (2).jpg';
+import WcrewNeck3 from './assets/women_tees/torn tees denim effect 200 GSM (3).jpg';
+import ActiveWear from './assets/women_tees/active_wear.png';
+import Organic from './assets/organic.png'
+import OrganicCreation from './assets/natural-dying_v2.webp';
+import OrganicProof from './assets/organic_rep.jpg'
+import Shade from './assets/shade.jpg';
 import { Category } from './type';
 
 const categories: Category[] = [
     {
         id: "organics",
         name: "Organics",
-        image: "",
+        image: Organic,
         subCategories: [
-            {
-                id: "hoodie-sweatshirt",
-                categoryId: "organics",
-                name: "Hoodie & Sweatshirt",
-                image: "path/to/organics-hoodie-sweatshirt.jpg",
-                Products: []
-            },
-            {
-                id: "tshirt",
-                categoryId: "organics",
-                name: "T-Shirt",
-                image: "path/to/organics-tshirt.jpg",
-                Products: []
-            },
-            {
-                id: "track-suit",
-                categoryId: "organics",
-                name: "Track-Suit",
-                image: "path/to/organics-track-suit.jpg",
-                Products: []
-            },
+            // {
+            //     id: "tshirt",
+            //     categoryId: "organics",
+            //     name: "T-Shirt",
+            //     image: "path/to/organics-tshirt.jpg",
+            //     Products: []
+            // },
+            // {
+            //     id: "track-suit",
+            //     categoryId: "organics",
+            //     name: "Track-Suit",
+            //     image: "path/to/organics-track-suit.jpg",
+            //     Products: []
+            // },
             {
                 id: "pant-short",
                 categoryId: "organics",
                 name: "Pant & Short",
-                image: "path/to/organics-pant-short.jpg",
-                Products: []
+                image: Organic,
+                Products: [
+                    {
+                        id: "hemp_fabric_banana",
+                        name: "Hemp Fabric Natural Dye Shorts",
+                        gsm: "200 GSM",
+                        type: "Hemp Cotton",
+                        blendRatio: "60 Hemp 40 Cotton",
+                        image: [Banana,Banana2,Shade,OrganicCreation,OrganicProof],
+                        color: "Banana yellow",
+                        categoryId: "organics",
+                        subCategoryId: "pant-short"
+                    },
+                    {
+                        id: "hemp_fabric_walnut",
+                        name: "Hemp Fabric Natural Dye Shorts",
+                        gsm: "200 GSM",
+                        type: "Hemp Cotton",
+                        blendRatio: "60 Hemp 40 Cotton",
+                        image:[Walnut,Walnut2,Shade,OrganicCreation,OrganicProof],
+                        color: "Walnut",
+                        categoryId: "organics",
+                        subCategoryId: "pant-short"
+                    },
+                    {
+                        id: "hemp_fabric_madder",
+                        name: "Hemp Fabric Natural Dye Shorts",
+                        gsm: "200 GSM",
+                        type: "Hemp Cotton",
+                        blendRatio: "60 Hemp 40 Cotton",
+                        image:[Madder,Madder2,Shade,OrganicCreation,OrganicProof],
+                        color: "madder Brick",
+                        categoryId: "organics",
+                        subCategoryId: "pant-short"
+                    },
+                    {
+                        id: "hemp_fabric_blue",
+                        name: "Hemp Fabric Natural Dye Shorts",
+                        gsm: "200 GSM",
+                        type: "Hemp Cotton",
+                        blendRatio: "60 Hemp 40 Cotton",
+                        image:[Blue,Blue2,Shade,OrganicCreation,OrganicProof],
+                        color: "madder Brick",
+                        categoryId: "organics",
+                        subCategoryId: "pant-short"
+                    },
+                    {
+                        id: "hemp_fabric_green",
+                        name: "Hemp Fabric Natural Dye Shorts",
+                        gsm: "200 GSM",
+                        type: "Hemp Cotton",
+                        blendRatio: "60 Hemp 40 Cotton",
+                        image:[Green,Green2,Shade,OrganicCreation,OrganicProof],
+                        color: "madder Brick",
+                        categoryId: "organics",
+                        subCategoryId: "pant-short"
+                    },
+                ]
             },
-            {
-                id: "jacket",
-                categoryId: "organics",
-                name: "Jacket",
-                image: "path/to/organics-jacket.jpg",
-                Products: []
-            },
-            {
-                id: "sweater",
-                categoryId: "organics",
-                name: "Sweater",
-                image: "path/to/organics-sweater.jpg",
-                Products: []
-            },
-            {
-                id: "polo-shirt",
-                categoryId: "organics",
-                name: "Polo Shirt",
-                image: "path/to/organics-polo-shirt.jpg",
-                Products: []
-            }
         ]
     },
     {
@@ -86,34 +182,99 @@ const categories: Category[] = [
                 categoryId: "womens",
                 name: "Hoodie & Sweat Shirt",
                 image: Hoodie,
-                Products: []
+                Products: [
+                    {
+                        id: "all-over-hoodie",
+                        name: "All Over Printed Hoodie",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [AllOverPrintHoodie,AllOverPrintHoodie2],
+                        color: "Multi Black",
+                        categoryId: "womens",
+                        subCategoryId: "hoodie"
+                    },
+                ]
             },
             {
                 id: "tshirts",
                 categoryId: "womens",
                 name: "T-Shirts",
-                image: Hoodie,
-                Products: []
-            },
-            {
-                id: "jacket",
-                categoryId: "womens",
-                name: "Jackets",
-                image: Hoodie,
-                Products: []
-            },
-            {
-                id: "yogapants",
-                categoryId: "womens",
-                name: "Yoga Pants",
-                image: Hoodie,
-                Products: []
+                image: WCage,
+                Products: [
+                    {
+                        id: "basics_black_crew_neck_180_gsm",
+                        name: "Basics Black Crew Neck 180 GSM",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [WBlackCrew,WBlackCrew2,WBlackCrew3],
+                        color: "Multi Black",
+                        categoryId: "womens",
+                        subCategoryId: "tshirts"
+                    },
+                    {
+                        id: "cage_back_stormi_tee_180_gsm",
+                        name: "Cage Back Stormi Tee 180 GSM",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [WCage,WCage2],
+                        color: "Multi Black",
+                        categoryId: "womens",
+                        subCategoryId: "tshirts"
+                    },
+                    {
+                        id: "charlotte_cut_beads_aqua_blue",
+                        name: "Charlotte Cut Beads Aqua Blue",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [WCharlotte,WCharlotte2,WCharlotte3],
+                        color: "Multi Black",
+                        categoryId: "womens",
+                        subCategoryId: "tshirts"
+                    },
+                    {
+                        id: "embroidery_womens_blue_tees",
+                        name: "EMBROIDERY Womens Blue Tees",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [WEmbroid,WEmbroid2,WEmbroid3],
+                        color: "Multi Black",
+                        categoryId: "womens",
+                        subCategoryId: "tshirts"
+                    },
+                    {
+                        id: "torn_tees_denim_effect_200_gsm",
+                        name: "Torn Tees Denim Effect 200 GSM",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [WTornTees,WTornTees2,WTornTees3],
+                        color: "Multi Black",
+                        categoryId: "womens",
+                        subCategoryId: "tshirts"
+                    },
+                    {
+                        id: "womens_crew_neck_tees_190_gsm",
+                        name: "Womens Crew Neck Tees 190 GSM",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [WcrewNeck,WcrewNeck2,WcrewNeck3],
+                        color: "Multi Black",
+                        categoryId: "womens",
+                        subCategoryId: "tshirts"
+                    }
+                ]
             },
             {
                 id: "activewear",
                 categoryId: "womens",
                 name: "Active Wears",
-                image: Hoodie,
+                image: ActiveWear,
                 Products: [
                     {
                         id: "comfy-mid-intensity-bra",
@@ -121,7 +282,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear1,
+                        image: [wear1],
                         color: "Multi Black",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -132,7 +293,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear2,
+                        image: [wear2],
                         color: "Multi Black",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -143,7 +304,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear3,
+                        image: [wear3],
                         color: "Air Force",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -154,7 +315,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear4,
+                        image: [wear4],
                         color: "Black",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -165,7 +326,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear5,
+                        image: [wear5],
                         color: "Grey Heather",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -176,7 +337,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear6,
+                        image: [wear6],
                         color: "Tie and Dye",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -187,7 +348,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear7,
+                        image: [wear7],
                         color: "Black",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -198,7 +359,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear8,
+                        image: [wear8],
                         color: "Potpouri",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -209,7 +370,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear9,
+                        image: [wear9],
                         color: "Black (Silver Reflective)",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -220,7 +381,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear10,
+                        image: [wear10],
                         color: "Cabernet",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -231,7 +392,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: wear11,
+                        image: [wear11],
                         color: "Dark Grey",
                         categoryId: "womens",
                         subCategoryId: "activewear"
@@ -260,9 +421,10 @@ const categories: Category[] = [
                         wash: "Apptical Wash",
                         print: "Dtg",
                         color: "Multi Black",
-                        image: "",
+                        image: [Travis,Travis2,Travis3],
                         categoryId: "mens",
-                        subCategoryId: "tshirts"
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
                     },
                     {
                         id: "nirvana",
@@ -273,9 +435,10 @@ const categories: Category[] = [
                         wash: "Apptical Wash",
                         print: "Dtg",
                         color: "Multi Black",
-                        image: "",
+                        image: [Nirvana,Nirvana2,Nirvana3],
                         categoryId: "mens",
-                        subCategoryId: "tshirts"
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
                     },
                     {
                         id: "astroworld-happyface",
@@ -286,9 +449,10 @@ const categories: Category[] = [
                         wash: "Apptical Wash",
                         print: "Dtg",
                         color: "Yellow",
-                        image: "",
+                        image: [AstroWorld,AstroWorld2,AstroWorld3],
                         categoryId: "mens",
-                        subCategoryId: "tshirts"
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
                     },
                     {
                         id: "the-weekend-xo",
@@ -299,23 +463,25 @@ const categories: Category[] = [
                         wash: "Apptical Wash",
                         print: "Dtg",
                         color: "Pearl Green",
-                        image: "",
+                        image: [WeekendXO,WeekendXO2,WeekendXO3],
                         categoryId: "mens",
-                        subCategoryId: "tshirts"
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
                     },
-                    {
-                        id: "astro-world",
-                        name: "Astro World",
-                        gsm: "200 Gsm",
-                        fabric: "Single Jersey",
-                        blendRatio: "100% Cotton",
-                        wash: "Apptical Wash,Lava Wash,Over Dying",
-                        print: "Screen Print",
-                        color: "Black And Red",
-                        image: "",
-                        categoryId: "mens",
-                        subCategoryId: "tshirts"
-                    },
+                    // {
+                    //     id: "astro-world",
+                    //     name: "Astro World",
+                    //     gsm: "200 Gsm",
+                    //     fabric: "Single Jersey",
+                    //     blendRatio: "100% Cotton",
+                    //     wash: "Apptical Wash,Lava Wash,Over Dying",
+                    //     print: "Screen Print",
+                    //     color: "Black And Red",
+                    //     image: [],
+                    //     categoryId: "mens",
+                    //     subCategoryId: "tshirts",
+                    //     type:"Cotton"
+                    // },
                     {
                         id: "chrome-culture-beige",
                         name: "Chrome Culture",
@@ -325,9 +491,38 @@ const categories: Category[] = [
                         wash: "Silicone Wash",
                         print: "All Over Print",
                         color: "Beige",
-                        image: "",
+                        image:[OverBeige,OverBeige2],
                         categoryId: "mens",
-                        subCategoryId: "tshirts"
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
+                    },
+                    {
+                        id: "kenneth-cole",
+                        name: "Kenneth Cole Crew Neck T-Shirts",
+                        gsm: "200 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Apptical Wash",
+                        print: "Dtg",
+                        color: "Multi Black",
+                        image: [Kenneth,Kenneth2],
+                        categoryId: "mens",
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
+                    },
+                    {
+                        id: "all-over-print-sleeves",
+                        name: "All Over Print Sleeves",
+                        gsm: "200 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Apptical Wash",
+                        print: "Dtg",
+                        color: "Multi Black",
+                        image: [AllOverPrintSleeves,AlloverPrintSleeves2],
+                        categoryId: "mens",
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
                     },
                     {
                         id: "chrome-culture-blue",
@@ -338,9 +533,10 @@ const categories: Category[] = [
                         wash: "Silicone Wash",
                         print: "All Over Print",
                         color: "Sky Blue",
-                        image: "",
+                        image: [OverBlue,OverBlue2],
                         categoryId: "mens",
                         subCategoryId: "tshirts",
+                        type:"Cotton"
                     },
                     {
                         id: "chrome-culture-black",
@@ -353,7 +549,8 @@ const categories: Category[] = [
                         color: "Black",
                         categoryId: "mens",
                         subCategoryId: "tshirts",
-                        image:''
+                        image:[OverBlack,OverBlack2],
+                        type:"Cotton"
                     },
                     {
                         id: "chrome-culture-white",
@@ -366,7 +563,8 @@ const categories: Category[] = [
                         color: "White",
                         categoryId: "mens",
                         subCategoryId: "tshirts",
-                        image:''
+                        image:[OverWhite,OverWhite2],
+                        type:"Cotton"
                     },
                     {
                         id: "dye-and-tie",
@@ -380,11 +578,69 @@ const categories: Category[] = [
                         color: "Black And White And Green",
                         categoryId: "mens",
                         subCategoryId: "tshirts",
-                        image:''
+                        image:[PrintedTees],
+                        type:"Cotton"
                     },
                     {
-                        id: "dye-and-tie",
+                        id: "dye-and-tie_tee",
                         name: "Dye And Tie",
+                        gsm: "190 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash,Acid Wash",
+                        pattern: "Dye And Tie",
+                        print: "Screen Print (Puff)",
+                        color: "White",
+                        categoryId: "mens",
+                        subCategoryId: "tshirts",
+                        image:[OverteesWhite],
+                        type:"Cotton"
+                    },
+                    {
+                        id: "belui",
+                        name: "Belui T-Shirts",
+                        gsm: "200 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Apptical Wash",
+                        
+                        color: "Multi Color",
+                        image: [Belui],
+                        categoryId: "mens",
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
+                    },
+                    {
+                        id: "polyster-crew-tees",
+                        name: "Polyster Crew T-Shirt",
+                        gsm: "200 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Apptical Wash",
+                        color: "Blue",
+                        image: [PolysterCrew,PolysterCrew2],
+                        categoryId: "mens",
+                        subCategoryId: "tshirts",
+                        type:"Cotton"
+                    },
+                    {
+                        id: "sublimation-xl",
+                        name: "Sublimation Xl T-Shirts",
+                        gsm: "190 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash,Acid Wash",
+                        pattern: "Dye And Tie",
+                    
+                        color: "Black And Gray",
+                        categoryId: "mens",
+                        subCategoryId: "tshirts",
+                        image:[SublimationXl],
+                        type:"Cotton"
+                    },
+                    {
+                        id: "sublimation",
+                        name: "Sublimation T-Shirts",
                         gsm: "190 Gsm",
                         fabric: "Single Jersey",
                         blendRatio: "100% Cotton",
@@ -394,7 +650,8 @@ const categories: Category[] = [
                         color: "Black And Gray",
                         categoryId: "mens",
                         subCategoryId: "tshirts",
-                        image:''
+                        image:[SublimationTees],
+                        type:"Cotton"
                     }
                 ]
             },
@@ -416,7 +673,7 @@ const categories: Category[] = [
                         color: "Black",
                         categoryId: "mens",
                         subCategoryId: "hoodie",
-                        image:''
+                        image:[MenHoodie,AllOverPrintHoodie2]
                     }
                 ]
             },
@@ -425,36 +682,57 @@ const categories: Category[] = [
                 categoryId: "mens",
                 name: "Track Suit",
                 image: TrackMen,
-                Products: []
-            },
-            {
-                id: "pants-shorts",
-                categoryId: "mens",
-                name: "Pants & Shorts",
-                image: Shorts,
-                Products: []
-            },
-            {
-                id: "sweater",
-                categoryId: "mens",
-                name: "Sweater",
-                image: MenSweat,
-                Products: []
+                Products: [
+                    {
+                        id: "polysterturby",
+                        name: "PolySter Turby Track Pants",
+                        gsm: "320 Gsm",
+                        blendRatio: "Polyster",
+                        wash: "Silicone Wash,Acid Wash",
+                        pattern: "Dye And Tie",
+                        print: "Screen Print (Puff)",
+                        color: "Black",
+                        categoryId: "mens",
+                        subCategoryId: "tracksuit",
+                        image:[polyster_turby,polyster_turby2]
+                    },
+                    {
+                        id: "boys_track",
+                        name: "Boys Track Pants",
+                        gsm: "320 Gsm",
+                        blendRatio: "Polyster",
+                        wash: "Silicone Wash,Acid Wash",
+                        pattern: "Dye And Tie",
+                        print: "Screen Print (Puff)",
+                        color: "Black",
+                        categoryId: "mens",
+                        subCategoryId: "tracksuit",
+                        image:[BoysTrack_Pant,BoysTrackPant]
+                    }
+                ]
             },
             {
                 id: "polo-shirt",
                 categoryId: "mens",
                 name: "Polo Shirt",
                 image: Polo,
-                Products: []
+                Products: [
+                    {
+                        id: "single_jersey_Polo",
+                        name: "Single Jersey Polo T-shirt",
+                        gsm: "320 Gsm",
+                        fabric: "Loof Knit",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash,Acid Wash",
+                        pattern: "Dye And Tie",
+                        print: "Screen Print (Puff)",
+                        color: "Black",
+                        categoryId: "mens",
+                        subCategoryId: "polo-shirt",
+                        image:[singleJerseyPolo,singleJerseyPolo2]
+                    },
+                ]
             },
-            {
-                id: "jacket",
-                categoryId: "mens",
-                name: "Jacket",
-                image: Jacket,
-                Products: []
-            }
         ]
     },
     {
@@ -466,14 +744,21 @@ const categories: Category[] = [
                 id: "hoodie-sweatshirts",
                 categoryId: "kids",
                 name: "Hoodie & SweatShirts",
-                image: "path/to/kids-hoodie-sweatshirts.jpg",
+                image: Hoodie,
                 Products: []
             },
             {
                 id: "track-suits",
                 categoryId: "kids",
                 name: "Track-Suits",
-                image: "path/to/kids-track-suits.jpg",
+                image: TrackMen,
+                Products: []
+            },
+            {
+                id: "t-shirts",
+                categoryId: "kids",
+                name: "Over-Sized T-Shirts",
+                image: OverBlue,
                 Products: []
             },
         ]
