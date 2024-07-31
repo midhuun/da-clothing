@@ -18,7 +18,6 @@ import Kenneth from './assets/product/Kenneth_cole_Crew_neck.jpg'
 import Kenneth2 from './assets/product/Kenneth_cole_Crew_neck (2).jpg';
 import AllOverPrintSleeves from  './assets/product/Allover_Print_Full_sleeves.jpg';
 import AlloverPrintSleeves2 from  './assets/product/Allover_Print_Full_sleeves (2).jpg';
-import AllOverPrintHoodie from './assets/product/all_over_print_hoodie.jpg';
 import AllOverPrintHoodie2 from './assets/product/all_over_print_hoodie (2).jpg';
 import SublimationXl from './assets/product/sublimation_8xl_t-shirt.jpg';
 import SublimationTees from './assets/product/sublimation_t-shirt.jpg';
@@ -77,16 +76,15 @@ import WEmbroid3 from './assets/women_tees/EMBROIDERY womens blue  tees 180 GSM 
 import WTornTees from './assets/women_tees/torn tees denim effect 200 GSM.jpg';
 import WTornTees2 from './assets/women_tees/torn tees denim effect 200 GSM (2).jpg';
 import WTornTees3 from './assets/women_tees/torn tees denim effect 200 GSM (3).jpg';
-import WcrewNeck from './assets/women_tees/torn tees denim effect 200 GSM.jpg';
-import WcrewNeck2 from './assets/women_tees/torn tees denim effect 200 GSM (2).jpg';
-import WcrewNeck3 from './assets/women_tees/torn tees denim effect 200 GSM (3).jpg';
+import WcrewNeck from './assets/women_tees/womens crew neck tees 190 GSM.jpg';
+import WcrewNeck2 from './assets/women_tees/womens crew neck tees 190 GSM (2).jpg';
 import ActiveWear from './assets/women_tees/active_wear.png';
 import Organic from './assets/organic.png'
 import OrganicCreation from './assets/natural-dying_v2.webp';
 import OrganicProof from './assets/organic_rep.jpg'
 import Shade from './assets/shade.jpg';
 import { Category } from './type';
-
+import OverSize from  './assets/over-size.png';
 const categories: Category[] = [
     {
         id: "organics",
@@ -189,7 +187,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: [AllOverPrintHoodie,AllOverPrintHoodie2],
+                        image: [MenHoodie,AllOverPrintHoodie2],
                         color: "Multi Black",
                         categoryId: "womens",
                         subCategoryId: "hoodie"
@@ -263,7 +261,7 @@ const categories: Category[] = [
                         gsm: "200 GSM",
                         type: "Polyster Fabric",
                         blendRatio: "80 Poly 60 Spandex",
-                        image: [WcrewNeck,WcrewNeck2,WcrewNeck3],
+                        image: [WcrewNeck,WcrewNeck2],
                         color: "Multi Black",
                         categoryId: "womens",
                         subCategoryId: "tshirts"
@@ -681,7 +679,7 @@ const categories: Category[] = [
                 id: "tracksuit",
                 categoryId: "mens",
                 name: "Track Suit",
-                image: TrackMen,
+                image:polyster_turby,
                 Products: [
                     {
                         id: "polysterturby",
@@ -745,21 +743,120 @@ const categories: Category[] = [
                 categoryId: "kids",
                 name: "Hoodie & SweatShirts",
                 image: Hoodie,
-                Products: []
+                Products: [
+                    {
+                        id: "all-over-hoodie_kids",
+                        name: "All Over Printed Hoodie",
+                        gsm: "200 GSM",
+                        type: "Polyster Fabric",
+                        blendRatio: "80 Poly 60 Spandex",
+                        image: [MenHoodie,AllOverPrintHoodie2],
+                        color: "Multi Black",
+                        categoryId: "kids",
+                        subCategoryId: "hoodie-sweatshirts"
+                    },
+                ]
             },
             {
                 id: "track-suits",
                 categoryId: "kids",
                 name: "Track-Suits",
                 image: TrackMen,
-                Products: []
+                Products: [
+                    {
+                        id: "boys_track_kids",
+                        name: "Boys Track Pants",
+                        gsm: "320 Gsm",
+                        blendRatio: "Polyster",
+                        wash: "Silicone Wash,Acid Wash",
+                        pattern: "Dye And Tie",
+                        print: "Screen Print (Puff)",
+                        color: "Black",
+                        categoryId: "kids",
+                        subCategoryId: "boys_track",
+                        image:[BoysTrack_Pant,BoysTrackPant]
+                    }
+                ]
             },
             {
                 id: "t-shirts",
                 categoryId: "kids",
                 name: "Over-Sized T-Shirts",
-                image: OverBlue,
-                Products: []
+                image: OverSize,
+                Products: [
+                    {
+                        id: "chrome-culture-blue",
+                        name: "Chrome Culture",
+                        gsm: "240 Gsm",
+                        fabric: "Loof Knit",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash",
+                        print: "All Over Print",
+                        color: "Sky Blue",
+                        image: [OverBlue,OverBlue2],
+                        categoryId: "kids",
+                        subCategoryId: "t-shirts",
+                        type:"Cotton"
+                    },
+                    {
+                        id: "chrome-culture-black",
+                        name: "Chrome Culture",
+                        gsm: "240 Gsm",
+                        fabric: "Loof Knit",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash",
+                        emp: "Design Butterfly",
+                        color: "Black",
+                        categoryId: "kids",
+                        subCategoryId: "t-shirts",
+                        image:[OverBlack,OverBlack2],
+                        type:"Cotton"
+                    },
+                    {
+                        id: "chrome-culture-white",
+                        name: "Chrome Culture",
+                        gsm: "240 Gsm",
+                        fabric: "Loof Knit",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash",
+                        emp: "Design Butterfly",
+                        color: "White",
+                        categoryId: "kids",
+                        subCategoryId: "t-shirts",
+                        image:[OverWhite,OverWhite2],
+                        type:"Cotton"
+                    },
+                    {
+                        id: "dye-and-tie",
+                        name: "Dye And Tie",
+                        gsm: "190 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash",
+                        pattern: "Dye And Tie",
+                        print: "Screen Print (Puff)",
+                        color: "Black And White And Green",
+                        categoryId: "kids",
+                        subCategoryId: "t-shirts",
+                        image:[PrintedTees],
+                        type:"Cotton"
+                    },
+                    {
+                        id: "dye-and-tie_tee",
+                        name: "Dye And Tie",
+                        gsm: "190 Gsm",
+                        fabric: "Single Jersey",
+                        blendRatio: "100% Cotton",
+                        wash: "Silicone Wash,Acid Wash",
+                        pattern: "Dye And Tie",
+                        print: "Screen Print (Puff)",
+                        color: "White",
+                        categoryId: "kids",
+                        subCategoryId: "t-shirts",
+                        image:[OverteesWhite],
+                        type:"Cotton"
+                    },
+                ]
             },
         ]
     }

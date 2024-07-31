@@ -1,6 +1,7 @@
 import Call from '../assets/icons/phone.svg';
 import Message from '../assets/icons/message-square.svg'
 import Location from '../assets/icons/map-pin.svg';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return <div className="pt-[50px]">
     <footer className="md:flex justify-between bg-[#333333] p-6 text-[12px] md:text-[14px] text-white">
@@ -9,30 +10,28 @@ const Footer = () => {
                 <h4 className="font-bold text-lg">DA Clothing <span>Manufacturer</span></h4>
                 </div>
 
-                <p className="flex gap-4 font-semibold py-2">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Products</a>
+                <p className="flex items-center gap-4 font-semibold py-2">
+                    <Link to="/">Home</Link>  
                 </p>
 
                 <p className="footer-company-name py-2">
-                    Copyright © 2021- 2023<br />
+                    Copyright © 2022- 2024<br />
                 </p>
             </div>
 
             <div className="flex flex-col justify-center gap-2 md:gap-4">
                 <div className="py-3 flex items-center gap-2 md:gap-4">
                     <img src={Location} alt="" />
-                    <p><span>Vilankurichi</span> Coimbatore</p>
+                    <p><span>Perichipalayam</span> Tirupur</p>
                 </div>
 
                 <div className="flex items-center gap-4">
                 <img src={Call} alt="" />
-                    <p>+91 9092958088</p>
+                    <p>+91 7010121851</p>
                 </div>
                 <div className="flex items-center gap-4 py-2">
                     <img src={Message} alt="" />
-                    <p><a href="mailto:shriadithyabioagri@gmail.com">daclothingmanufacturer@gmail.com</a></p>
+                    <p><a href="mailto:daclothingmanufacturer@gmail.com">daclothingmanufacturer@gmail.com</a></p>
                 </div>
             </div>
 
@@ -40,10 +39,10 @@ const Footer = () => {
                 <p className="footer-company-about my-3">
                     <span className="font-bold ">Address</span>
                     <br  />
-                    Shri Adithya Bio Agri <br />
-                    No.8, 2nd Street, Teacher's colony <br />
-                    Vilankuruchi road <br />
-                    Coimbatore – 641 035
+                   DA Clothing Manufacturer<br />
+                   Meenakshi Compound<br />
+                    Kadeshwara Marakadai Cross<br />
+                    Tirupur – 641 604
                 </p>
                 <div className="footer-icons">
                     <a href="https://wa.me/919894358088?text=I%20am%20interested%20in%20buying%20your%20Products">

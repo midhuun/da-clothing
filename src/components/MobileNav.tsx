@@ -29,7 +29,8 @@ const MobileNav = () => {
         <img className="h-8 w-8 rounded-full border absolute top-2 left-2" src={Logo} alt="" />
         </Link>
         <svg onClick={()=>setIsNavOpen(false)} className="cursor-pointer absolute right-2 top-2 z-[1001]" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#000000" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
-        <div className=" categories md:pl-[80px] font-semibold items-center gap-5">
+        <div className=" categories  md:pl-[80px] font-semibold items-center gap-5">
+        <Link to='/' className="py-3"><h2 className="border-b">Home</h2></Link>
         {categories.map((val:Category)=> 
         <Link onClick={()=>setIsNavOpen(!isNavOpen)} key={val.id} to={`/categories/${val.id}`}><h2 className="py-2 border-b" key={val.id}>{val.name}</h2></Link>
         )}
@@ -50,7 +51,7 @@ const MobileNav = () => {
         </div>
         <form onSubmit={(e)=>SearchProduct(e)} className="search relative flex items-center gap-3">
               <input
-                className="  text-[12px]  lg:text-sm placeholder:text-gray-400 border border-gray-400 rounded-sm p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
+                className="  text-[12px]  lg:text-sm placeholder:text-gray-400 border border-gray-400 rounded-sm p-1 mr-6 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
                 type="text"
                 onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setValue(e.target.value)}
                 name=""
@@ -58,7 +59,7 @@ const MobileNav = () => {
                 id=""
               />
               {results?.length>0 && searchClicked?
-              <div className="absolute top-10  rounded-md border left-[-30px] bg-white w-[180px] min-h-[100px]">
+              <div className="absolute top-10  rounded-md border left-[-10px] bg-white w-[180px] min-h-[100px]">
                 <div className="flex flex-col">
                 {results.map((result:Product)=>
                 <Link onClick={()=>setSearchClicked(!searchClicked)} to={`/categories/${result.categoryId}/${result.subCategoryId}/${result.id}`}>
@@ -77,7 +78,7 @@ const MobileNav = () => {
                 </div>
               </div>
               :""}
-              <button  className="absolute right-2">
+              <button  className="absolute right-8">
                 <img className="h-4" src={Search} alt="" />
               </button>
             </form>

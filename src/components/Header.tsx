@@ -44,7 +44,7 @@ const Header = () => {
         )}
       </div>
     </div>
-    <div className=" flex justify-center"><h5 className="uppercase font-semibold text-sm md:text-xl logo pl-5 ">DA Clothing Manufacturer</h5></div>
+    <div className=" flex justify-center"><h5 className="uppercase font-semibold text-sm md:text-xl logo pl-5 ">🇩‌🇦‌ 🇨‌🇱‌🇴‌🇹‌🇭‌🇮‌🇳‌🇬‌ 🇲‌🇦‌🇳‌🇺‌🇫‌🇦‌🇨‌🇹‌🇺‌🇷‌🇪‌🇷‌</h5></div>
     <div>
     <div className="hidden lg:flex items-center gap-6 lg:gap-[50px]">
             <form onSubmit={(e)=>SearchProduct(e)} className="search relative flex items-center gap-3">
