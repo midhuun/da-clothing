@@ -9,11 +9,7 @@ import wear8 from './subCategories/womens/i-activewear/activewear_womens-33.jpg'
 import wear9 from './subCategories/womens/i-activewear/activewear_womens-35.jpg';
 import wear10 from './subCategories/womens/i-activewear/activewear_womens-37.jpg';
 import wear11 from './subCategories/womens/i-activewear/activewear_womens-46.jpg';
-import Hoodie from './subCategories/womens/i-hoodies/hoodie.jpg';
 import MenHoodie from './assets/product/all_over_print_hoodie (3).png';
-import MenTees from './assets/Men/t-shirts.png';
-import TrackMen from './assets/Men/track-men.jpg';
-import Polo from './assets/Men/polo.png';
 import Kenneth from './assets/product/Kenneth_cole_Crew_neck.jpg'
 import Kenneth2 from './assets/product/Kenneth_cole_Crew_neck (2).jpg';
 import AllOverPrintSleeves from  './assets/product/Allover_Print_Full_sleeves.jpg';
@@ -78,7 +74,8 @@ import WTornTees2 from './assets/women_tees/torn tees denim effect 200 GSM (2).j
 import WTornTees3 from './assets/women_tees/torn tees denim effect 200 GSM (3).jpg';
 import WcrewNeck from './assets/women_tees/womens crew neck tees 190 GSM.jpg';
 import WcrewNeck2 from './assets/women_tees/womens crew neck tees 190 GSM (2).jpg';
-import ActiveWear from './assets/women_tees/active_wear.png';
+import ActiveStock from './assets/active-wear.png';
+import OverStock from './assets/travis-scott.png';
 import Organic from './assets/organic.png'
 import OrganicCreation from './assets/natural-dying_v2.webp';
 import OrganicProof from './assets/organic_rep.jpg'
@@ -179,7 +176,7 @@ const categories: Category[] = [
                 id: "hoodie",
                 categoryId: "womens",
                 name: "Hoodie & Sweat Shirt",
-                image: Hoodie,
+                image: MenHoodie,
                 Products: [
                     {
                         id: "all-over-hoodie",
@@ -272,7 +269,7 @@ const categories: Category[] = [
                 id: "activewear",
                 categoryId: "womens",
                 name: "Active Wears",
-                image: ActiveWear,
+                image: ActiveStock,
                 Products: [
                     {
                         id: "comfy-mid-intensity-bra",
@@ -407,8 +404,8 @@ const categories: Category[] = [
             {
                 id: "tshirts",
                 categoryId: "mens",
-                name: "T-Shirts",
-                image: MenTees,
+                name: "Over Sized T-Shirts",
+                image: OverStock,
                 Products: [
                     {
                         id: "travis-scott-comic",
@@ -566,7 +563,7 @@ const categories: Category[] = [
                     },
                     {
                         id: "dye-and-tie",
-                        name: "Dye And Tie",
+                        name: "Over Sized T-Shirts",
                         gsm: "190 Gsm",
                         fabric: "Single Jersey",
                         blendRatio: "100% Cotton",
@@ -581,7 +578,7 @@ const categories: Category[] = [
                     },
                     {
                         id: "dye-and-tie_tee",
-                        name: "Dye And Tie",
+                        name: "Over Sized T-Shirts",
                         gsm: "190 Gsm",
                         fabric: "Single Jersey",
                         blendRatio: "100% Cotton",
@@ -595,8 +592,8 @@ const categories: Category[] = [
                         type:"Cotton"
                     },
                     {
-                        id: "belui",
-                        name: "Belui T-Shirts",
+                        id: "dye-and-tie",
+                        name: "Dye And Tie",
                         gsm: "200 Gsm",
                         fabric: "Single Jersey",
                         blendRatio: "100% Cotton",
@@ -713,7 +710,7 @@ const categories: Category[] = [
                 id: "polo-shirt",
                 categoryId: "mens",
                 name: "Polo Shirt",
-                image: Polo,
+                image: singleJerseyPolo,
                 Products: [
                     {
                         id: "single_jersey_Polo",
@@ -742,7 +739,7 @@ const categories: Category[] = [
                 id: "hoodie-sweatshirts",
                 categoryId: "kids",
                 name: "Hoodie & SweatShirts",
-                image: Hoodie,
+                image: MenHoodie,
                 Products: [
                     {
                         id: "all-over-hoodie_kids",
@@ -761,7 +758,7 @@ const categories: Category[] = [
                 id: "track-suits",
                 categoryId: "kids",
                 name: "Track-Suits",
-                image: TrackMen,
+                image: BoysTrackPant,
                 Products: [
                     {
                         id: "boys_track_kids",
@@ -827,8 +824,8 @@ const categories: Category[] = [
                         type:"Cotton"
                     },
                     {
-                        id: "dye-and-tie",
-                        name: "Dye And Tie",
+                        id: "over-sized-tees2",
+                        name: "Over Sized T-Shirts",
                         gsm: "190 Gsm",
                         fabric: "Single Jersey",
                         blendRatio: "100% Cotton",
@@ -842,8 +839,8 @@ const categories: Category[] = [
                         type:"Cotton"
                     },
                     {
-                        id: "dye-and-tie_tee",
-                        name: "Dye And Tie",
+                        id: "over-sized_tee",
+                        name: "Over Sized T-Shirts",
                         gsm: "190 Gsm",
                         fabric: "Single Jersey",
                         blendRatio: "100% Cotton",

@@ -59,13 +59,13 @@ const MobileNav = () => {
                 id=""
               />
               {results?.length>0 && searchClicked?
-              <div className="absolute top-10  rounded-md border left-[-10px] bg-white w-[180px] min-h-[100px]">
+              <div className="absolute top-10  rounded-md border left-[-20px] bg-white z-[1000] w-[200px] min-h-[100px]">
                 <div className="flex flex-col">
                 {results.map((result:Product)=>
                 <Link onClick={()=>setSearchClicked(!searchClicked)} to={`/categories/${result.categoryId}/${result.subCategoryId}/${result.id}`}>
-                <div className="flex justify-start py-1 gap-1">
-                  <div className="w-[60px] flex ">
-                  <img src={result.image[0]} className="h-[70px] w-[60px] object-contain" alt="" />
+                <div className="flex justify-start p-1 gap-2">
+                  <div className="w-[60px] h-[70px] flex ">
+                  <img src={result.image[0]} className="h-[70px] w-[60px] object-cover" alt="" />
                   </div>
                   <div className="flex flex-col gap-2">
                   <h2 className=" text-[12px] font-semibold">{result.name}</h2>
@@ -77,7 +77,7 @@ const MobileNav = () => {
                 )}
                 </div>
               </div>
-              :""}
+              : ""}
               <button  className="absolute right-8">
                 <img className="h-4" src={Search} alt="" />
               </button>
@@ -89,3 +89,13 @@ const MobileNav = () => {
 }
 
 export default MobileNav;
+
+{/* <div className="absolute top-10  rounded-md border left-[-20px] bg-white z-[1000] w-[200px] min-h-[80px]"> <div className="flex justify-center items-center p-1 gap-2">
+              <div className="w-[60px] h-[70px] flex justify-center items-center">
+              <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy-HbkrFNbp7exMN_600jiVf9SyxYWND0-2YLiJkiGUF0ZeXg0BStAo-7uus-AerIbrlU&usqp=CAU' className="h-[40px] w-[40px] object-cover" alt="" />
+              </div>
+              <div className="flex flex-col  gap-2">
+              <h2 className=" text-[12px] font-semibold">No Results found</h2>
+              
+              </div>
+            </div></div> */}

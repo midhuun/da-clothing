@@ -8,9 +8,7 @@ const SubCategories:React.FC = () => {
     <div className="w-full">
         <div className="flex justify-center  w-full gap-3 md:gap-5 flex-wrap py-1">
             {current?.subCategories?.map((cat)=>
-            <Link key={cat.id} to={{
-                pathname: `/categories/${category}/${cat.id}`
-            }}> <div  className="flex justify-center flex-col items-center md:h-[350px] rounded-md md:w-[350px] h-[210px] w-[150px] border ">
+            <Link  key={cat.id} to={`/categories/${category}/${cat.id}`}> <div  className="flex justify-center flex-col items-center md:h-[350px] rounded-md md:w-[350px] h-[210px] w-[150px] border ">
                 <div className="flex justify-center items-center p-1 ">
                 <img className=" md:h-[270px] md:w-[300px] h-[150px] w-[130px] object-contain p-1" src={cat.image} alt={cat.name} />
                 </div>

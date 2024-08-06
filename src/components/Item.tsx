@@ -62,7 +62,7 @@ const Item = () => {
     <div className="flex scroll gap-3 py-5 w-full overflow-scroll overflow-y-hidden scr">
 
         {similar?.map((product)=>
-        <Link className="px-4" key={product.id} to={{
+        <Link onClick={()=>window.location.reload()} className="px-4" key={product.id} to={{
           pathname: `/categories/${category}/${subcategory}/${product.id}`
       }}><Card image ={product.image[0]}  name={product.name} /></Link>
     )}
