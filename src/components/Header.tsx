@@ -75,7 +75,13 @@ const Header = () => {
                 )}
                 </div>
               </div>
-              :""}
+              : results.length === 0 && searchClicked ? (
+                <div className="absolute top-full left-0 mt-2 bg-white border rounded-md shadow-lg w-full z-10">
+                  <div className="flex items-center justify-center p-4">
+                    <h2 className="text-sm font-semibold">No Results Found..</h2>
+                  </div>
+                </div>
+              ) : null}
               <button className="absolute cursor-pointer  z-[1000] right-2" >
                 <img  className="h-4" src={Search} alt="" />
               </button>
