@@ -5,7 +5,7 @@ import Message from "../assets/message-square.svg"
 import Search from "../assets/search.svg";
 import Menu from "../assets/align-left.svg";
 import './css/header.css';
-import { json, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Categories from '../categories';
 import MobileNav from './MobileNav';
 import categories from "../categories";
