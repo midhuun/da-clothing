@@ -5,7 +5,7 @@ import Message from "../assets/message-square.svg"
 import Search from "../assets/search.svg";
 import Menu from "../assets/align-left.svg";
 import './css/header.css';
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 import Categories from '../categories';
 import MobileNav from './MobileNav';
 import categories from "../categories";
@@ -21,8 +21,9 @@ const Header = () => {
  items.map((item)=>item.map((product)=>product?.map((single)=>products.push(single))))
  function SearchProduct(event:any){
    event.preventDefault();
-   const searchValue = products.filter((prod)=> value && prod?.id.includes(value));
+   const searchValue = products.filter((prod)=> value && prod?.name.includes(value));
    setSearchClicked(!searchClicked);
+   alert(JSON.stringify(searchValue))
    setResults(searchValue)
  }
  console.log(results);
