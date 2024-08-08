@@ -32,7 +32,7 @@ const MobileNav = () => {
       value && prod.id.toLowerCase().includes(value.toLowerCase())
     );
     setResults(searchValue);
-    setSearchClicked(true);
+    setSearchClicked(!searchClicked);
   };
 
   return (
