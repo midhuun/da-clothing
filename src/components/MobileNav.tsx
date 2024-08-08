@@ -8,7 +8,7 @@ import { Product, Category } from "../type";
 const MobileNav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const products: Product[] = [];
-  const [value, setValue] = useState<string | null>(null);
+  const [value, setValue] = useState<string | null>("bra");
   const [results, setResults] = useState<Product[]>([]);
   const [searchClicked, setSearchClicked] = useState(false);
   
