@@ -10,15 +10,28 @@ import Categories from '../categories';
 import MobileNav from './MobileNav';
 import categories from "../categories";
 import { Product,Category } from "../type";
+import { useMemo } from "react";
 const Header = () => {
- const products:Product[] = [];
  const [value,setValue] = useState<string | null>(null);
  const [results,setResults] = useState<Product[]>([]);
  const [searchClicked,setSearchClicked] = useState(false);
- const subCategories = categories.map((sub)=> sub.subCategories);
- const items = subCategories.map(item=> item.map((product)=>product.Products));
 //  const Products:Product[] = [];
- items.map((item)=>item.map((product)=>product?.map((single)=>products.push(single))))
+const products: Product[] = useMemo(() => {
+  const allProducts: Product[] = [];
+  const subCategories = categories.map((sub) => sub.subCategories);
+  const items = subCategories.flatMap((item) => item.map((product) => product.Products));
+  items.forEach((item:any) => {
+    item.forEach((product:Product) => {
+      if (product) {
+        allProducts.push(product);
+      }
+    });
+  });
+  return allProducts;
+}, [categories]);
+
+ 
+ 
  function SearchProduct(event:any){
    event.preventDefault();
    const searchValue = products.filter((prod)=> value && prod?.name.includes(value));

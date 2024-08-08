@@ -18,10 +18,9 @@ const MobileNav = () => {
   items.map((item) => item.map((product) => product?.map((single) => products.push(single))));
   
   function SearchProduct(e: any) {
-
     e.preventDefault();
-    alert("Search works")
     const searchValue = products.filter((prod) => value && prod?.id.includes(value));
+    alert(JSON.stringify(searchValue))
     setSearchClicked(!searchClicked);
     setResults(searchValue);
   }
