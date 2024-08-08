@@ -20,7 +20,7 @@ const MobileNav = () => {
   function SearchProduct(e: any) {
     e.preventDefault();
     const searchValue = products.filter((prod) => value && prod?.id.includes(value));
-    alert(JSON.stringify(searchValue))
+    alert(value)
     setSearchClicked(!searchClicked);
     setResults(searchValue);
   }
