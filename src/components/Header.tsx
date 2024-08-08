@@ -30,13 +30,15 @@ const products: Product[] = useMemo(() => {
   return allProducts;
 }, [categories]);
 
+ console.log(products);
  
  
  function SearchProduct(event:any){
    event.preventDefault();
-   const searchValue = products.filter((prod)=> value && prod?.name.includes(value));
+   console.log(value);
+   const searchValue = products.filter((prod)=> value && prod?.id.includes(value));
    setSearchClicked(!searchClicked);
-   alert(JSON.stringify(searchValue))
+  //  alert(JSON.stringify(searchValue))
    setResults(searchValue)
  }
  console.log(results);
