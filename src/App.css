@@ -13,3 +13,43 @@ h5{
 .card{
   text-align-last: left;
 }
+/* General styles for the arrows */
+.carousel .control-arrow {
+  background-color: rgba(0, 0, 0, 0.5); 
+  top: 50px;
+  border-radius: 50%; /* Round arrows */
+  width: 40px;
+  height: 40px;
+  color: black; /* White arrow color */
+  border: none;
+  z-index: 2; /* Ensure arrows are above other elements */
+  opacity: 1; /* Ensure arrows are always visible */
+}
+.carousel.carousel-slider .control-arrow{
+  top: 300px !important;
+  
+}
+/* Center the arrows vertically */
+.carousel .control-prev.control-arrow {
+  left: 15px; /* Position the left arrow */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .control-next.control-arrow {
+  right: 15px; /* Position the right arrow */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Prevent arrows from disappearing on hover or on small screens */
+.carousel .control-arrow:hover {
+  opacity: 1;
+}
+
+.carousel .control-arrow:before {
+  font-size: 20px; /* Adjust arrow icon size */
+  color: white; /* Ensure icon is white */
+}
+
+

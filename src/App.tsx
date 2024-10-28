@@ -6,6 +6,7 @@ import Home from "./Home";
 import SubCategories from "./subCategories/subCategories";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SubItems from './subCategories/subItems';
+import Admin from "./components/Admin";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/item/:id" element={<Item />} />
           <Route path="/contact" element={<Header />} />
+          <Route path="/admin/arun" element={<Admin />} />
           <Route path="/categories/:category" element={<SubCategories />} />
           <Route path="/categories/:category/:subcategory" element={<SubItems/>} />
           <Route path="/categories/:category/:subcategory/:item" element={<Item/>} />

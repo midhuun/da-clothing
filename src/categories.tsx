@@ -88,20 +88,6 @@ const categories: Category[] = [
         name: "Organics",
         image: Organic,
         subCategories: [
-            // {
-            //     id: "tshirt",
-            //     categoryId: "organics",
-            //     name: "T-Shirt",
-            //     image: "path/to/organics-tshirt.jpg",
-            //     Products: []
-            // },
-            // {
-            //     id: "track-suit",
-            //     categoryId: "organics",
-            //     name: "Track-Suit",
-            //     image: "path/to/organics-track-suit.jpg",
-            //     Products: []
-            // },
             {
                 id: "pant-short",
                 categoryId: "organics",

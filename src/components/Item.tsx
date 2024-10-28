@@ -22,7 +22,7 @@ const Item = () => {
         <Carousel 
          interval={2500}
          useKeyboardArrows={true}
-          showArrows={false}
+          showArrows={true}
         infiniteLoop={false}
         showThumbs={false}
         showStatus={false}
