@@ -6,7 +6,6 @@ import Home from "./Home";
 import SubCategories from "./subCategories/subCategories";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SubItems from './subCategories/subItems';
-import Admin from "./components/Admin";
 function App() {
   return (
     <BrowserRouter>
