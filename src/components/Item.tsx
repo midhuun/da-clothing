@@ -83,7 +83,7 @@ const Item = () => {
         {similar?.map((product)=>
         <Link onClick={()=>window.location.reload()} className="px-4" key={product.id} to={{
           pathname: `/categories/${category}/${subcategory}/${product.id}`
-      }}><Card image ={product.image[0]}  name={product.name} /></Link>
+      }}><Card description="" image ={product.image[0]}  name={product.name} /></Link>
     )}
       </div>
     </>

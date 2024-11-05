@@ -15,7 +15,7 @@ const Header = () => {
   const [results, setResults] = useState<Product[]>([]);
   const [searchClicked, setSearchClicked] = useState(false);
   const [searchedValue,setSearchedValue] = useState("");
-  const debounceRef = useRef<NodeJS.Timeout | null>(null);
+  const debounceRef = useRef<any>(null);
 
   const products: Product[] = useMemo(() => {
     const allProducts: Product[] = [];
