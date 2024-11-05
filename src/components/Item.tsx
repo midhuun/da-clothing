@@ -4,15 +4,34 @@ import Card from "./card";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './css/item.css';
+import { useMemo } from "react";
 const Item = () => {
-  const {category,subcategory,item} = useParams(); 
-  const current = AllProducts?.find((cat)=>cat.id === category) || null;
-  const subCategories = current?.subCategories.find((item)=> item.id === subcategory);
-  const products = subCategories?.Products;
-  const product = subCategories?.Products?.find((product) => product.id == item)
-  const similar = products?.filter((item)=> item.id !== product?.id )
-  
- 
+  const { category, subcategory, item } = useParams();
+
+  // Memoize the current category
+  const current = useMemo(() => {
+    return AllProducts?.find((cat) => cat.id === category) || null;
+  }, [AllProducts, category]);
+
+  // Memoize the subcategory
+  const subCategories = useMemo(() => {
+    return current?.subCategories.find((sub) => sub.id === subcategory);
+  }, [current, subcategory]);
+
+  // Memoize the products
+  const products = useMemo(() => {
+    return subCategories?.Products;
+  }, [subCategories]);
+
+  // Memoize the specific product
+  const product = useMemo(() => {
+    return products?.find((prod) => prod.id === item);
+  }, [products, item]);
+
+  // Memoize similar products
+  const similar = useMemo(() => {
+    return products?.filter((prod) => prod.id !== product?.id);
+  }, [products, product]);
   return (
     <>
     <div className=" flex justify-center md:pt-10 ">

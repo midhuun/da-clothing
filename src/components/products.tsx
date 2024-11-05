@@ -6,7 +6,6 @@ const products = categories.map((category)=>{
   const subCategory = category.subCategories;
   return subCategory;
 });
-console.log(products);
 
 const Items = () => {
 
@@ -20,7 +19,7 @@ const Items = () => {
                   pathname: `/categories/${item.categoryId}/${item.id}`
     
               }}>
-                <Card image={item.image} name={item.name} /> 
+                <Card description={item.description}  image={item.image} name={item.name} /> 
                 </Link>
               )
           })

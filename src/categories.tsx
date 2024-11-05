@@ -87,11 +87,13 @@ const categories: Category[] = [
         id: "organics",
         name: "Organics",
         image: Organic,
+        description:"Eco-friendly, comfortable pants and shorts crafted from organic materials, perfect for a natural, sustainable wardrobe with a relaxed fit",
         subCategories: [
             {
                 id: "pant-short",
                 categoryId: "organics",
                 name: "Pant & Short",
+                description:"Organic, sustainable pants and shorts crafted from eco-friendly materials, offering both comfort and durability for everyday wear.",
                 image: Organic,
                 Products: [
                     {
@@ -157,11 +159,13 @@ const categories: Category[] = [
         id: "womens",
         name: "Womens",
         image: "",
+        description:"Fashion-forward women's t-shirts and activewear, offering comfort, flexibility, and durability for both workouts and casual wear",
         subCategories: [
             {
                 id: "hoodie",
                 categoryId: "womens",
                 name: "Hoodie & Sweat Shirt",
+                description:"Comfortable and stylish hoodies made from polyester fabric, ideal for casual wear.",
                 image: MenHoodie,
                 Products: [
                     {
@@ -181,6 +185,7 @@ const categories: Category[] = [
                 id: "tshirts",
                 categoryId: "womens",
                 name: "T-Shirts",
+                description:"A diverse collection of stylish and durable t-shirts in various colors and patterns, featuring high-quality polyester blends.",
                 image: WCage,
                 Products: [
                     {
@@ -256,6 +261,7 @@ const categories: Category[] = [
                 categoryId: "womens",
                 name: "Active Wears",
                 image: ActiveStock,
+                description:"Premium activewear designed for comfort and flexibility, perfect for workouts and daily activities.",
                 Products: [
                     {
                         id: "comfy-mid-intensity-bra",
@@ -386,11 +392,13 @@ const categories: Category[] = [
         id: "mens",
         name: "Mens",
         image: "",
+        description:"Stylish and versatile collection of men's shirts and tees, designed for both casual and formal looks, available in various colors and fabrics.",
         subCategories: [
             {
                 id: "tshirts",
                 categoryId: "mens",
                 name: "Over Sized T-Shirts",
+                description:"Relaxed-fit tees for men, combining comfort and style in a range of colors and prints.",
                 image: OverStock,
                 Products: [
                     {
@@ -640,6 +648,7 @@ const categories: Category[] = [
                 id: "hoodie",
                 categoryId: "mens",
                 name: "Hoodie & Sweatshirts",
+                description:"Cozy, versatile hoodies and sweatshirts designed for casual, everyday wear.",
                 image: MenHoodie,
                 Products: [
                     {
@@ -662,6 +671,7 @@ const categories: Category[] = [
                 id: "tracksuit",
                 categoryId: "mens",
                 name: "Track Suit",
+                description:"Sleek and comfortable tracksuits for active lifestyles, balancing flexibility with style.",
                 image:polyster_turby,
                 Products: [
                     {
@@ -697,6 +707,7 @@ const categories: Category[] = [
                 categoryId: "mens",
                 name: "Polo Shirt",
                 image: singleJerseyPolo,
+                description:"Classic polos for men, blending style and comfort, ideal for both casual and semi-formal settings.",
                 Products: [
                     {
                         id: "single_jersey_Polo",
@@ -720,10 +731,12 @@ const categories: Category[] = [
         id: "kids",
         name: "Kids",
         image: "",
+        description:"Fun, comfortable shirts and tees for kids, available in vibrant colors and playful designs for everyday adventures and play",
         subCategories: [
             {
                 id: "hoodie-sweatshirts",
                 categoryId: "kids",
+                description:"Fun and vibrant hoodies for kids, offering warmth and style with playful designs.",
                 name: "Hoodie & SweatShirts",
                 image: MenHoodie,
                 Products: [
@@ -744,6 +757,7 @@ const categories: Category[] = [
                 id: "track-suits",
                 categoryId: "kids",
                 name: "Track-Suits",
+                description:"Comfortable and stylish tracksuits designed for kids, perfect for active play and sports.",
                 image: BoysTrackPant,
                 Products: [
                     {
@@ -765,6 +779,7 @@ const categories: Category[] = [
                 id: "t-shirts",
                 categoryId: "kids",
                 name: "Over-Sized T-Shirts",
+                description:"Trendy oversized tees for kids, providing a relaxed fit and cheerful graphics for everyday wear.",
                 image: OverSize,
                 Products: [
                     {

@@ -3,7 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Womens from "../assets/womens.webp";
 import Mens from "../assets/mens.webp";
-import { lazy } from "react";
 const NewsLetter = () => {
 
   return (

@@ -8,11 +8,14 @@ const SubCategories:React.FC = () => {
     <div className="w-full">
         <div className="flex justify-center  w-full gap-3 md:gap-5 flex-wrap py-1">
             {current?.subCategories?.map((cat)=>
-            <Link  key={cat.id} to={`/categories/${category}/${cat.id}`}> <div  className="flex justify-center flex-col items-center md:h-[350px] rounded-md md:w-[350px] h-[210px] w-[150px] border ">
-                <div className="flex justify-center items-center p-1 ">
-                <img className=" md:h-[270px] md:w-[300px] h-[150px] w-[130px] object-contain p-1" src={cat.image} alt={cat.name} />
+            <Link  key={cat.id} to={`/categories/${category}/${cat.id}`}> <div  className="flex  flex-col items-center md:h-[450px] rounded-md md:w-[350px] h-[250px] w-[150px] border ">
+                <div className="flex justify-center items-center p-1 overflow-hidden ">
+                <img className=" md:h-[300px] md:w-[300px] h-[140px] w-[130px] object-contain p-1" src={cat.image} alt={cat.name} />
                 </div>
-                <h1 className="lg:font-semibold text-sm text-center h-[70px] text-wrap p-2 lg:text-md">{cat.name}</h1>
+                <div>
+                <h1 className="lg:font-semibold text-sm text-center text-wrap p-2 lg:text-md">{cat.name}</h1>
+                <p className="text-[10px] p-2 mb-2 md:p-3 md:text-sm text-gray-500 line-clamp-3">{cat.description.split(" ").slice(0,9).join(" ")}</p>
+                </div>
             </div>
             </Link>
             )}
