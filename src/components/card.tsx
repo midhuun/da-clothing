@@ -5,11 +5,11 @@ type Description = {
 }
 const Card = (props:Description) => {
   return (
-    <div className="flex flex-col items-center overflow-hidden  md:p-4 p-1 bg-white rounded-md shadow-md md:h-[450px] md:w-[350px] h-[250px] w-[150px] border border-gray-200">
+    <div className="flex flex-col items-center overflow-hidden  md:p-4 p-1 bg-white rounded-md shadow-md md:h-[400px] md:w-[300px] h-[250px] w-[150px] border border-gray-200">
     {/* Image Section */}
     <div className="flex justify-center items-center p-1 md:p-2">
         <img 
-            className="object-contain h-[140px] md:h-[280px] w-[160px] md:w-[330px]" 
+            className="object-contain h-[140px] md:h-[230px] w-[160px] md:w-[280px]" 
             src={props.image} 
             alt={props.name} 
         />
