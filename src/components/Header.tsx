@@ -1,129 +1,138 @@
-import { useState } from "react";
+import { useState, useRef, ChangeEvent, useMemo } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import Phone from "../assets/phone-call.svg";
-import Message from "../assets/message-square.svg"
+import Message from "../assets/message-square.svg";
 import Search from "../assets/search.svg";
 import Menu from "../assets/align-left.svg";
 import './css/header.css';
-import { Link } from "react-router-dom";
 import Categories from '../categories';
 import MobileNav from './MobileNav';
 import categories from "../categories";
-import { Product,Category } from "../type";
-import { useMemo } from "react";
-const Header = () => {
- const [value,setValue] = useState<string | null>(null);
- const [results,setResults] = useState<Product[]>([]);
- const [searchClicked,setSearchClicked] = useState(false);
-//  const Products:Product[] = [];
-const products: Product[] = useMemo(() => {
-  const allProducts: Product[] = [];
-  const subCategories = categories.map((sub) => sub.subCategories);
-  const items = subCategories.flatMap((item) => item.map((product) => product.Products));
-  items.forEach((item:any) => {
-    item.forEach((product:Product) => {
-      if (product) {
-        allProducts.push(product);
-      }
-    });
-  });
-  return allProducts;
-}, [categories]);
+import { Product, Category } from "../type";
 
- console.log(products);
- 
- 
- function SearchProduct(event:any){
-   event.preventDefault();
-   console.log(value);
-   const searchValue = products.filter((prod)=> value && prod?.id.includes(value));
-   setSearchClicked(!searchClicked);
-  //  alert(JSON.stringify(searchValue))
-   setResults(searchValue)
- }
- console.log(results);
- 
+const Header = () => {
+  const [results, setResults] = useState<Product[]>([]);
+  const [searchClicked, setSearchClicked] = useState(false);
+  const [searchedValue,setSearchedValue] = useState("");
+  const debounceRef = useRef<NodeJS.Timeout | null>(null);
+
+  const products: Product[] = useMemo(() => {
+    const allProducts: Product[] = [];
+    const subCategories = categories.map((sub) => sub.subCategories);
+    const items = subCategories.flatMap((item) => item.map((product) => product.Products));
+    items.forEach((item: any) => {
+      item.forEach((product: Product) => {
+        if (product) {
+          allProducts.push(product);
+        }
+      });
+    });
+    return allProducts;
+  }, [categories]);
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchedValue(event.target.value)
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+
+    debounceRef.current = setTimeout(() => {
+      const searchValue: Product[] = products.filter((prod) =>
+        searchedValue && prod.id.includes(searchedValue)
+      );
+      setSearchClicked(true);
+      setResults(searchValue);
+    }, 700);
+  };
+
   return (
     <>
-     <div className="lg:hidden">
-       <MobileNav />
-     </div>
-     <div className="lg:flex hidden p-3 md:p-10 justify-between items-center w-full top-0 fixed z-[999] h-[80px] bg-[#FAFAFA]">
-    <div className="flex items-center w-[33%] ">
-      <Link to='/'>
-      <img src={Logo} alt="" className="h-[45px] hidden md:block  w-[45px] border rounded-full object-cover" />
-      </Link>
-      <img src={Menu} alt="" className="h-[30px] md:hidden   w-[30px]  object-cover" />
-      <div className="lg:flex hidden categories md:pl-[80px] font-semibold items-center gap-5">
-        {Categories.map((val:Category)=> 
-        <Link key={val.id} to={`/categories/${val.id}`}><h3  key={val.id}>{val.name}</h3></Link>
-        )}
+      <div className="lg:hidden">
+        <MobileNav />
       </div>
-    </div>
-    <div className=" flex justify-center"><h5 className="uppercase font-semibold text-sm md:text-xl logo pl-5 ">🇩‌🇦‌ 🇨‌🇱‌🇴‌🇹‌🇭‌🇮‌🇳‌🇬‌ 🇲‌🇦‌🇳‌🇺‌🇫‌🇦‌🇨‌🇹‌🇺‌🇷‌🇪‌🇷‌</h5></div>
-    <div>
-    <div className="hidden lg:flex items-center gap-6 lg:gap-[50px]">
-            <form onSubmit={(e)=>SearchProduct(e)} className="search relative flex items-center gap-3">
+      <div className="lg:flex hidden p-3 md:p-10 justify-between items-center w-full top-0 fixed z-[999] h-[80px] bg-[#FAFAFA]">
+        <div className="flex items-center w-[33%] ">
+          <Link to='/'>
+            <img src={Logo} alt="" className="h-[45px] hidden md:block w-[45px] border rounded-full object-cover" />
+          </Link>
+          <img src={Menu} alt="" className="h-[30px] md:hidden w-[30px] object-cover" />
+          <div className="lg:flex hidden categories md:pl-[80px] font-semibold items-center gap-5">
+            {Categories.map((val: Category) =>
+              <Link key={val.id} to={`/categories/${val.id}`}>
+                <h3>{val.name}</h3>
+              </Link>
+            )}
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <h5 className="uppercase font-semibold text-sm md:text-xl logo pl-5">
+            🇩‌🇦‌ 🇨‌🇱‌🇴‌🇹‌🇭‌🇮‌🇳‌🇬‌ 🇲‌🇦‌🇳‌🇺‌🇫‌🇦‌🇨‌🇹‌🇺‌🇷‌
+          </h5>
+        </div>
+        <div>
+          <div className="hidden lg:flex items-center gap-6 lg:gap-[50px]">
+            <form onSubmit={(e) => e.preventDefault()} className="search relative flex items-center gap-3">
               <input
-                className=" placeholder:text-gray-400 rounded-lg  text-[12px]  lg:text-sm  border-gray-400  border p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px] "
+                className="placeholder:text-gray-400 rounded-lg text-[12px] lg:text-sm border-gray-400 border p-1 sm:p-2 focus:outline-none outline-none md:w-[250px] lg:max-w-[250px] w-[150px] sm:w-[250px]"
                 type="text"
-                onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setValue(e.target.value)}
-                name=""
+                onChange={handleSearch}
                 placeholder="Search"
-                id=""
               />
-              {results?.length>0 && searchClicked?
-              <div className="absolute top-10  rounded-md border right-[-3] bg-white min-w-[350px] min-h-[100px]">
-                <div className="flex flex-col">
-                {results.map((result:Product)=>
-                <Link onClick={()=>setSearchClicked(!searchClicked)} to={`/categories/${result.categoryId}/${result.subCategoryId}/${result.id}`}>
-                <div className="flex justify-start py-3 gap-3">
-                  <div className="w-[100px] flex ">
-                  <img src={result.image[0]} className="h-[120px] w-[100px] object-contain" alt="" />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                  <h2 className=" text-md font-semibold w-[180px]">{result.name}</h2>
-                  <h2 className="text-sm">{result.blendRatio}</h2>
+              {results.length > 0 && searchedValue && searchClicked ? (
+                <div className="absolute top-10 rounded-md border right-[-3] bg-white min-w-[350px] min-h-[100px]">
+                  <div className="flex flex-col">
+                    {results.slice(0,4).map((result: Product) => (
+                      <Link
+                        key={result.id}
+                        onClick={() => setSearchClicked(false)}
+                        to={`/categories/${result.categoryId}/${result.subCategoryId}/${result.id}`}
+                      >
+                        <div className="flex justify-start py-3 gap-3">
+                          <div className="w-[100px] flex">
+                            <img src={result.image[0]} className="h-[120px] w-[100px] object-contain" alt="" />
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <h2 className="text-md font-semibold w-[180px]">{result.name}</h2>
+                            <h2 className="text-sm">{result.blendRatio}</h2>
+                          </div>
+                        </div>
+                        <hr />
+                      </Link>
+                    ))}
                   </div>
                 </div>
-                <hr />
-                </Link>
-                )}
-                </div>
-              </div>
-              : results.length === 0 && searchClicked ? (
+              ) : results.length === 0 && searchClicked ? (
                 <div className="absolute top-full left-0 mt-2 bg-white border rounded-md shadow-lg w-full z-10">
                   <div className="flex items-center justify-center p-4">
                     <h2 className="text-sm font-semibold">No Results Found..</h2>
                   </div>
                 </div>
               ) : null}
-              <button className="absolute cursor-pointer  z-[1000] right-2" >
-                <img  className="h-4" src={Search} alt="" />
+              <button type="button" className="absolute cursor-pointer z-[1000] right-2">
+                <img className="h-4" src={Search} alt="" />
               </button>
             </form>
             <div className="call flex items-center gap-2">
-              <a className="items-center flex " href="tel:+917010121851">
-                {" "}
+              <a className="items-center flex" href="tel:+917010121851">
                 <img className="h-4 px-2" src={Phone} alt="" />
                 <h3 className="hidden lg:block">Call</h3>
               </a>
             </div>
             <div className="call flex items-center gap-2">
-              <a className="flex items-center " href="https://wa.me/7010121851">
+              <a className="flex items-center" href="https://wa.me/7010121851">
                 <img className="h-4 px-2" src={Message} alt="" />
                 <h3 className="hidden lg:block">Text</h3>
               </a>
             </div>
           </div>
-    </div>
-     </div>
-     <hr />
+        </div>
+      </div>
+      <hr />
     </>
   );
 };
 
 export default Header;
+
 
 
 
